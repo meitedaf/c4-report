@@ -33,7 +33,7 @@ Recommend the smallest fix that closes the cited issue. If multiple checks are n
 
 5. Include a complete PoC when requested.
 Provide:
-- where the PoC code should be inserted
+- where each PoC code block should be inserted
 - the exact code block
 - any helper code block
 - brief comments inside the PoC or a short explanation around it describing what each step proves
@@ -64,7 +64,9 @@ Inside `Vulnerability details *`, use these two subheaders:
 - Use plain English and short paragraphs.
 - Prefer “The contract does X and never checks Y” over abstract wording.
 - In `Links to root cause *`, use GitHub links with line numbers.
-- In `Proof of Concept (PoC) *`, explain exactly where the code should be placed using GitHub links when a public repo path is available.
+- In `Proof of Concept (PoC) *`, explain exactly which function or code block should be inserted at which location.
+- Do not only list helper names and line numbers; say what code goes where.
+- Use GitHub links for insertion locations when a public repo path is available.
 - Add short explanatory comments in PoC code, or a short paragraph immediately before the code block, so the reader can see what the PoC is proving.
 - If the PoC proves multiple manifestations of one root cause, explain that in one finding instead of splitting it.
 - Do not add sections that the C4 form does not have.
@@ -80,6 +82,7 @@ Before finalizing, confirm all of the following:
 - The mitigation addresses the cited root cause.
 - The PoC code is runnable with one explicit command.
 - The PoC placement instructions use repo links instead of local filesystem paths whenever possible.
+- The PoC section tells the reader what to paste where, not just which helper exists at which line.
 
 ## PoC Checklist
 
@@ -91,3 +94,4 @@ When including exploit code, ensure the PoC:
 - avoids unnecessary setup unrelated to the issue
 - includes short comments or surrounding explanation describing what the code does and what it proves
 - names the insertion point clearly using public repo links when possible
+- states which function bodies should be replaced and which helper blocks should be added
