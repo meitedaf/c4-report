@@ -1,0 +1,4 @@
+interface:
+  display_name: "C4 Report"
+  short_description: "Draft Code4rena findings cleanly"
+  default_prompt: "Use $c4-report to turn this validated issue into a Code4rena-ready submission."
